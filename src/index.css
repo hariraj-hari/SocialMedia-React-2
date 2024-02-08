@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,183 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  background-color: rgb(213, 209, 209);
+}
+#root{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.App{
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow:  0 0 15px black;
+  position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header{
+  text-align: center;
+  width: 100vw;
+  height: 10vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Nav{
+  width: 100%;
+  background-color: #adadad;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.searchForm{
+  width: 200px;
+  padding: 1.5rem;
+}
+
+.searchForm input[type="text"]{
+  width: 100%;
+  min-height: 38px;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  outline: none;
+}
+.searchForm label{
+  position: absolute;
+  left: -99999px;
+}
+.Nav ul li{
+  margin-left: 10px;
+  text-align: center;
+  margin-top: 35px;
+  height: 20px;
+  width: 100px;
+}
+
+ .Nav ul{
+  margin-left: 35px;
+  color: white;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  
+}
+Nav ul li{
+  letter-spacing: 0.5px;
+  min-width: 70px;
+  position: relative;
+}
+Nav ul li::after{
+  content: " ";
+  position: absolute;
+  background-color: #000000;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -9px;
+  transition: 0.3s;
+}
+Nav ul li:hover::after{
+  width: 100%;
+}/* 
+Nav ul li {
+  letter-spacing: 0.5px;
+  min-width: 100px;
+  position: relative;
+}
+
+Nav ul li::after {
+  content: " ";
+  position: absolute;
+  background-color: #f6acac;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: width 0.3s; /* Use 'width' property in the transition 
+}
+
+Nav ul li:hover::after {
+  width: 100%;
+}
+ */
+.Home{
+  margin-top: 12vmin;
+  width: 500px;
+  text-align: center;
+  height: 250px;
+  overflow-y: scroll;
+  border-radius: 12px 0px 0px 10px;
+  border: 1px solid black;
+}
+#Fotter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 10;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  background-color: #adadad;
+}
+.Home::-webkit-scrollbar{
+  width: 10px;
+}
+.Home::-webkit-scrollbar-track{
+  background: #f1f1f1;
+}
+.Home::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.NewPost{
+  margin-top: 50px;
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.newPostForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button[type="submit"]{
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  width: 170px;
+  height: 50px;
+  text-align: center;
+  background-color: #f6acac;
+  border-radius: 20px;
+}
+button[type="submit"]:hover{
+  background-color: #b4aeae;
+}
+input[id="postTitle"] {
+  border-radius: 7px;
+  border: none;
+  
+}
+input[id="postBody"]{
+  border-radius: 7px;
+  border: none;
+  
 }
